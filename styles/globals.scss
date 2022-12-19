@@ -1,0 +1,366 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@tailwind screens;
+
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Helvetica Neue, Helvetica, Arial, PingFang SC, Hiragino Sans GB, Microsoft YaHei, sans-serif;
+  height: 100%;
+  width: 100%;
+  letter-spacing: 1px;
+}
+
+
+.panel-bg, .sub-panel-bg, .h1-color, .h2-color, .h3-color.h4-color {
+  transition: background-color, color 0.8s ease-in-out;
+}
+
+.no-color-transition {
+  transition: none !important;
+}
+
+#light {
+  caret-color: #1a1a1a;
+
+  &:before {
+    content: '';
+    width: 100%;
+    height: 100vh;
+    //background-color: #ffffff;
+    background-image: url("../public/image/multicolor.jpg");
+    transition: background 1s;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: -10;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+  }
+
+}
+
+#light .optionContainer, #light .highlightOption {
+  background-color: #f9f9f9;
+  color: #213547;
+}
+
+#light .option {
+  &:hover {
+    background-color: #f1f1f1 !important;
+  }
+}
+
+#light .panel-bg {
+  background-color: #f9f9f9;
+}
+
+#light .sub-panel-bg {
+  background-color: #f1f1f1;
+}
+
+#light .h1-color {
+  color: #213547;
+}
+
+#light .h2-color {
+  color: rgba(60, 60, 60, .7);
+}
+
+#light .h3-color {
+  color: rgba(60, 60, 60, .33);
+}
+
+#light .h4-color {
+  color: rgba(60, 60, 60, .18);
+}
+
+#light .gradient-text {
+  background: -webkit-linear-gradient(left, #C33764, #1D2671);
+  background: -o-linear-gradient(right, #C33764, #1D2671);
+  background: -moz-linear-gradient(right, #C33764, #1D2671);
+  background: linear-gradient(to right, #C33764, #1D2671);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#dark .gradient-text {
+  background: -webkit-linear-gradient(left, #800080, #ffc0cb);
+  background: -o-linear-gradient(right, #800080, #ffc0cb);
+  background: -moz-linear-gradient(right, #800080, #ffc0cb);
+  background: linear-gradient(to right, #800080, #ffc0cb);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#dark {
+  caret-color: #ffffff;
+
+  &:before {
+    content: '';
+    width: 100%;
+    height: 100vh;
+    //background-color: #1a1a1a;
+    background-image: url("../public/image/dark.jpg");
+    transition: background 1s;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: -10;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+  }
+
+}
+
+#dark .optionContainer, #dark .highlightOption {
+  background-color: #242424;
+  color: rgba(255, 255, 255, .87);
+}
+
+#dark .option {
+  &:hover {
+    background-color: #2f2f2f !important;
+  }
+}
+
+#dark .panel-bg {
+  background-color: #242424;
+}
+
+#dark .sub-panel-bg {
+  background-color: #2f2f2f;
+}
+
+#dark .h1-color {
+  color: rgba(255, 255, 255, .87);
+}
+
+#dark .h2-color {
+  color: rgba(235, 235, 235, .6);
+}
+
+#dark .h3-color {
+  color: rgba(235, 235, 235, .38);
+}
+
+#dark .h4-color {
+  color: rgba(235, 235, 235, .18);
+}
+
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+
+//<editor-fold desc="滚动条样式">
+::-webkit-scrollbar {
+  /*滚动条整体样式*/
+  width: 10px; /*高宽分别对应横竖滚动条的尺寸*/
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+  background: rgba(0, 0, 0, 0);
+  border-radius: 10px;
+
+}
+
+::-webkit-scrollbar-thumb {
+  /*滚动条里面小方块*/
+  border-radius: 10px;
+
+  background-color: rgb(236 72 153);
+  background-image: -webkit-linear-gradient(
+                  45deg,
+                  rgba(255, 255, 255, 0.2) 25%,
+                  transparent 25%,
+                  transparent 50%,
+                  rgba(255, 255, 255, 0.2) 50%,
+                  rgba(255, 255, 255, 0.2) 75%,
+                  transparent 75%,
+                  transparent
+  );
+
+}
+
+//</editor-fold>
+
+//<editor-fold desc="评论按钮样式">
+.button-comment {
+  align-items: center;
+  background-image: linear-gradient(144deg, #AF40FF, #5B42F3 50%, #00DDEB) !important;
+  border: 0;
+  border-radius: 8px;
+  box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  display: flex;
+  font-family: Phantomsans, sans-serif;
+  //font-size: 20px;
+  justify-content: center;
+  //line-height: 1em;
+  width: 100%;
+  height: 100%;
+  //min-width: 140px;
+  padding: 2px;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.button-comment:active,
+.button-comment:hover {
+  outline: 0;
+
+}
+
+//</editor-fold>
+
+//<editor-fold desc="搜索按钮样式">
+.search-btn {
+  color: #fff;
+  cursor: pointer;
+  text-align: center;
+  border: none;
+  background-size: 300% 100%;
+  moz-transition: all .4s ease-in-out;
+  -o-transition: all .4s ease-in-out;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+}
+
+.search-btn:hover {
+  background-position: 99% 0;
+  moz-transition: all .4s ease-in-out;
+  -o-transition: all .4s ease-in-out;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+}
+
+.search-btn:focus {
+  outline: none;
+}
+
+#light .search-btn {
+  background-image: linear-gradient(to right, #ed6ea0, #ec8c69, #f7186a, #FBB03B);;
+  box-shadow: 0 4px 15px 0 rgba(49, 196, 190, 0.75);
+}
+
+#dark .search-btn {
+  background-image: linear-gradient(to right, #29323c, #485563, #2b5876, #4e4376);
+  box-shadow: 0 4px 15px 0 rgba(45, 54, 65, 0.75);
+}
+
+//</editor-fold>
+
+//<editor-fold desc="masonry layout">
+.my-masonry-grid {
+  display: -webkit-box; /* Not needed if autoprefixing */
+  display: -ms-flexbox; /* Not needed if autoprefixing */
+  display: flex;
+  margin-left: -30px; /* gutter size offset */
+  width: auto;
+}
+
+.my-masonry-grid_column {
+  padding-left: 30px; /* gutter size */
+  background-clip: padding-box;
+}
+
+/* Style your items */
+.my-masonry-grid_column > div { /* change div to reference your elements you put in <Masonry> */
+  background: transparent;
+  margin-bottom: 30px;
+  cursor: pointer;
+}
+
+/* Optional, different gutter size on mobile */
+@media (max-width: 800px) {
+  .my-masonry-grid {
+    margin-left: -15px; /* gutter size offset */
+  }
+  .my-masonry-grid_column {
+    padding-left: 15px; /* gutter size offset */
+  }
+  .my-masonry-grid_column > div {
+    margin-bottom: 15px; /* space between items */
+  }
+}
+
+//</editor-fold>
+.pagination {
+  .page {
+    padding: 0.3rem 0.5rem;
+    margin: 0 0.1rem;
+    border-radius: 0.3rem;
+  }
+  .next, .prev {
+    padding: 0.3rem;
+    border-radius: 0.3rem;
+  }
+
+  .next {
+    margin-left: 2rem;
+  }
+
+  .prev {
+    margin-right: 2rem;
+  }
+
+  .disabled {
+    color: gray;
+
+    :hover {
+      cursor: not-allowed;
+    }
+  }
+}
+
+#light .pagination {
+  .page {
+    background-color: #f9f9f9;
+  }
+
+  .active {
+    color: #f9f9f9;
+    background-color: #213547;
+  }
+
+  .next, .prev {
+    background-color: #f9f9f9;
+  }
+}
+
+#dark .pagination {
+  .page {
+    background-color: #242424;
+  }
+
+  .active {
+    color: black;
+    background-color: rgba(255, 255, 255, .87);
+  }
+
+  .next, .prev {
+    background-color: #242424;
+  }
+}
+
