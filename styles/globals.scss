@@ -171,6 +171,7 @@ a {
   /*滚动条整体样式*/
   width: 10px; /*高宽分别对应横竖滚动条的尺寸*/
   height: 10px;
+  //scroll-behavior: smooth !important;
 }
 
 ::-webkit-scrollbar-track {
@@ -362,5 +363,42 @@ a {
   .next, .prev {
     background-color: #242424;
   }
+}
+
+
+.markdown-navigation {
+  width: 100%;
+  overflow: hidden;
+}
+
+
+.markdown-navigation .title-anchor {
+  display: block;
+  cursor: pointer;
+  margin-bottom: 5px;
+}
+
+.markdown-navigation .title-anchor:hover{
+  color: hotpink;
+}
+.markdown-navigation .title-anchor.active{}
+
+.markdown-navigation .title-anchor small {
+  //margin: 0 0.8em;
+}
+
+.markdown-navigation .title-level1 {
+  padding-left: 1em;
+  font-weight: normal;
+}
+
+.markdown-navigation .title-level2 {
+  padding-left: 2em;
+  font-weight: normal;
+}
+
+.markdown-navigation .title-level3 {
+  padding-left: 3em;
+  font-weight: normal;
 }
 

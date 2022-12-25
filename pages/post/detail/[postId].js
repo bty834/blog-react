@@ -12,6 +12,7 @@ import {toast, ToastContainer} from "react-toastify";
 import {CalendarLogo} from "../../../components/logo/Logo";
 import moment from "moment/moment";
 import Markdown from "../../../components/Markdown";
+import Catalog from "../../../components/Catalog";
 
 
 // const commentsPerPage = 5
@@ -23,38 +24,23 @@ const PostId = ({postId, postDetail, recentPosts,curTags}) => {
     if (router.isFallback) {
         return <div>Loading...</div>
     }
-    // const [comments, setComments] = useState([]);
-    // const [pageCount, setPageCount] = useState(0);
-    // const [commentsTotal, setCommentsTotal] = useState(0);
-    //
-    //
-    // useEffect(() => {
-    //     fetchComments(1)
-    // }, [postId]);
-    //
-    // const fetchComments = async (pageNum) => {
-    //     const commentsResult = await queryCommentListById(postId, pageNum, commentsPerPage, 0);
-    //     setCommentsTotal(commentsResult?.total)
-    //     setPageCount(Math.ceil(commentsResult?.total / commentsPerPage))
-    //     setComments(commentsResult.data)
-    // }
-    // const handlePageClick = (event) => {
-    //     fetchComments(event.selected+1)
-    // };
+
 
     return (
         <div className="container mx-auto px-7 mb-8">
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-5">
-                <div className="col-span-1 lg:col-span-8">
+            <div className="grid grid-cols-1 xl:grid-cols-11 gap-5">
+                <div className="col-span-1 xl:col-span-8">
+                    {/*<Markdown content={postDetail?.content}/>*/}
                     <PostDetail postDetail={postDetail} curTags={curTags}/>
                     {/*<CommentsForm postId={postId}/>*/}
                     {/*<Comments comments={comments} total={commentsTotal}/>*/}
                     {/*<Pagination handlePageClick={handlePageClick} pageCount={pageCount}/>*/}
                 </div>
 
-                <div className="col-span-1 lg:col-span-4">
-                    <div className="relative lg:sticky top-8">
+                <div className="col-span-1 xl:col-span-3">
+                    <div className="relative xl:sticky top-8">
                         <PostWidget recentPosts={recentPosts}/>
+                        <Catalog  content={"# "+postDetail?.title+"\n"+postDetail?.content}/>
                     </div>
                 </div>
             </div>

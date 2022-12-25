@@ -1,6 +1,7 @@
 import React from 'react';
 import {Prism as SyntaxHighlighter} from "react-syntax-highlighter";
 import {oneDark as codeStyle} from "react-syntax-highlighter/dist/cjs/styles/prism";
+// import {dark as codeStyle} from "react-syntax-highlighter/dist/cjs/styles/hljs";
 import {BergerLogo} from "./logo/Logo";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
@@ -11,6 +12,7 @@ export const code = ({node, inline, className, children, ...props}) => {
     const match = /language-(\w+)/.exec(className || '')
     return !inline && match ? (
         <SyntaxHighlighter
+            className={"text-sm tracking-normal"}
             children={String(children).replace(/\n$/, '')}
             style={codeStyle}
             language={match[1]}
@@ -29,25 +31,25 @@ export const code = ({node, inline, className, children, ...props}) => {
 
 export const h1 = ({node, ...props}) => {
     return (
-        <div className="h1-color text-2xl mt-5 mb-3 font-bold" {...props} />
+        <h1 className="h1-color text-2xl mt-5 mb-3 font-bold" {...props} />
     );
 };
 
 export const h2 = ({node, ...props}) => {
     return (
-        <div className="h2-color text-xl mt-3 mb-1 font-bold" {...props} />
+        <h2 className="h2-color text-xl mt-3 mb-1 font-bold" {...props} />
     );
 };
 
 export const h3 = ({node, ...props}) => {
     return (
-        <div className="h2-color text-lg mt-2 mb-1 font-bold" {...props} />
+        <h3 className="h2-color text-lg mt-2 mb-1 font-bold" {...props} />
     );
 };
 
 export const h4 = ({node, ...props}) => {
     return (
-        <div className="h2-color mt-2 mb-1 font-bold" {...props} />
+        <h4 className="h2-color mt-2 mb-1 font-bold" {...props} />
     );
 };
 
@@ -88,6 +90,7 @@ export const li = ({node, ...props}) => {
 
 const Markdown = ({content})=>(
     <ReactMarkdown
+        // includeElementIndex
         children={content}
         remarkPlugins={[remarkGfm, remarkMath]}
         rehypePlugins={[rehypeKatex]}

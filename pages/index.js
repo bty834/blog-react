@@ -113,7 +113,8 @@ export default function Home({timelineData}) {
                 </div>
             </div>
 
-            <VerticalTimeline lineColor={lineColor[themeContext.theme]}>
+            <VerticalTimeline
+                lineColor={lineColor[themeContext.theme]}>
                 {timelineData?.length > 0 && (
                     timelineData?.map((data, index) => (
                         <VerticalTimelineElement

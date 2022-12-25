@@ -46,9 +46,9 @@ const PostDetail = ({postDetail, curTags}) => {
     }
     return (
         <div className="panel-bg flex-col items-center justify-center shadow-lg rounded-lg lg:pt-8 pt-2 mb-4">
-            <div className="h1-color px-2 text-center text-3xl font-bold mb-5">
+            <h1 className="h1-color px-2 text-center text-3xl font-bold mb-5">
                 {postDetail?.title}
-            </div>
+            </h1>
             <div className="relative flex items-center justify-center ">
                 <CalendarLogo/>
                 <span className="h2-color mr-4">

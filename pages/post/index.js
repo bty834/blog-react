@@ -110,8 +110,8 @@ export default function Post() {
             </Head>
 
 
-            <div className=" grid grid-cols-1 lg:grid-cols-12 gap-5">
-                <div className="lg:col-span-8 col-span-1">
+            <div className=" grid grid-cols-1 xl:grid-cols-11 gap-5">
+                <div className="xl:col-span-8 col-span-1">
                     <div
                         className={"relative h1-color mb-4 flex items-center"}
                         onBlur={clearSearchResult}
@@ -171,7 +171,7 @@ export default function Post() {
                         )
                     }
                 </div>
-                <div className="lg:col-span-4 col-span-1">
+                <div className="xl:col-span-3 col-span-1">
                     <div className="lg:sticky relative top-8">
                         <PostWidget recentPosts={recentPosts}/>
                         <TagsPanel tags={tags} selectedTagId={selectedTagId} setSelectedTagId={setSelectedTagId}/>
