@@ -112,34 +112,36 @@ export default function Home({timelineData}) {
 
                 </div>
             </div>
-
-            <VerticalTimeline
-                lineColor={lineColor[themeContext.theme]}>
-                {timelineData?.length > 0 && (
-                    timelineData?.map((data, index) => (
-                        <VerticalTimelineElement
-                            key={index}
-                            contentStyle={contentStyle[themeContext.theme]}
-                            contentArrowStyle={contentArrowStyle[themeContext.theme]}
-                            date={data.start + " - " + data.end}
-                            iconStyle={iconStyle[themeContext.theme]}
-                            icon={<TimelineIcon phase={data.phase}/>}
-                        >
-                            <Link href={data.link} target="_blank">
+            <div className={"overflow-x-hidden"}>
+                <VerticalTimeline
+                    lineColor={lineColor[themeContext.theme]}>
+                    {timelineData?.length > 0 && (
+                        timelineData?.map((data, index) => (
+                            <VerticalTimelineElement
+                                key={index}
+                                contentStyle={contentStyle[themeContext.theme]}
+                                contentArrowStyle={contentArrowStyle[themeContext.theme]}
+                                date={data.start + " - " + data.end}
+                                iconStyle={iconStyle[themeContext.theme]}
+                                icon={<TimelineIcon phase={data.phase}/>}
+                            >
+                                <Link href={data.link} target="_blank">
                         <span className="hover:text-pink-500 mr-2 font-bold">
                             {data.title}
                         </span>
-                            </Link>
-                            <div>
-                                {data.subTitle}
-                            </div>
-                            <div className="text-justify">
-                                {data.content}
-                            </div>
-                        </VerticalTimelineElement>
-                    ))
-                )}
-            </VerticalTimeline>
+                                </Link>
+                                <div>
+                                    {data.subTitle}
+                                </div>
+                                <div className="text-justify">
+                                    {data.content}
+                                </div>
+                            </VerticalTimelineElement>
+                        ))
+                    )}
+                </VerticalTimeline>
+            </div>
+
 
             <ToastContainer
                 position="top-center"
