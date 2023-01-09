@@ -23,7 +23,7 @@ export default function Home({timelineData}) {
 
 
     return (
-        <div className="container mx-auto px-7 mb-8">
+        <div className="container mx-auto px-7 pb-4">
             <Head>
                 <title>Bao的博客</title>
                 <link rel="icon" href="/favicon.ico"/>
@@ -140,6 +140,10 @@ export default function Home({timelineData}) {
                         ))
                     )}
                 </VerticalTimeline>
+            </div>
+
+            <div className={"h1-color text-sm text-center my-10"}>
+                <a href="https://beian.miit.gov.cn/" target="_blank">皖ICP备2023000569号-1</a>
             </div>
 
 

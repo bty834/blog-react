@@ -1,13 +1,5 @@
 const TagsPanel = ({tags, selectedTagId, setSelectedTagId}) => {
 
-    const allAmount = ()=>{
-        let amount = 0
-        for(let tag of tags){
-            amount +=tag.amount
-        }
-        return amount;
-    }
-
     return (
         <div className="panel-bg h1-color shadow-lg rounded-lg p-3 mb-5">
             <h3 className="mb-4 font-semi-bold border-b pb-2">
@@ -19,7 +11,7 @@ const TagsPanel = ({tags, selectedTagId, setSelectedTagId}) => {
                     setSelectedTagId(0)
                 }}
             >
-                全部({allAmount()})
+                全部
             </span>
             {tags.map((tag) => (
 

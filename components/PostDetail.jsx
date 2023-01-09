@@ -96,7 +96,7 @@ const PostDetail = ({postDetail, curTags}) => {
                     theme="colored"
                 />
             </div>
-            <div className="h1-color lg:p-4 p-2">
+            <div className="h1-color w-full overflow-x-scroll lg:p-4 p-2">
                 <Markdown content={postDetail?.content}/>
             </div>
 

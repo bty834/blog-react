@@ -27,7 +27,7 @@ const PostId = ({postId, postDetail, recentPosts,curTags}) => {
 
 
     return (
-        <div className="container mx-auto px-7 mb-8">
+        <div className="container mx-auto px-7 pb-4">
             <div className="grid grid-cols-1 xl:grid-cols-11 gap-5">
                 <div className="col-span-1 xl:col-span-8">
                     {/*<Markdown content={postDetail?.content}/>*/}

@@ -92,7 +92,7 @@ const Record = () => {
     }
 
     return (
-        <div className="container mx-auto px-7 mb-8">
+        <div className="container mx-auto px-7 pb-4">
             <Head>
                 <title>Bao的博客</title>
                 <link rel="icon" href="/favicon.ico"/>
