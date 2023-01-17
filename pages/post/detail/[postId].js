@@ -16,7 +16,7 @@ import Catalog from "../../../components/Catalog";
 
 
 // const commentsPerPage = 5
-const PostId = ({postId, postDetail, recentPosts,curTags}) => {
+const PostId = ({postId, postDetail, curTags}) => {
 
 
     const router = useRouter()
@@ -39,7 +39,7 @@ const PostId = ({postId, postDetail, recentPosts,curTags}) => {
 
                 <div className="col-span-1 xl:col-span-3">
                     <div className="relative xl:sticky top-8">
-                        <PostWidget recentPosts={recentPosts}/>
+                        {/*<PostWidget recentPosts={recentPosts}/>*/}
                         <Catalog  content={"# "+postDetail?.title+"\n"+postDetail?.content}/>
                     </div>
                 </div>
@@ -56,10 +56,8 @@ export async function getStaticProps(context) {
 
     const
         [postDetailResult,
-            recentPostsResult,
             curPostTagsResult] = await Promise.all([
                 queryPostDetailByPostId(postId),
-                queryRecentPostList(),
                 queryTagListByPostId(postId)
             ]
         )
@@ -67,7 +65,6 @@ export async function getStaticProps(context) {
         props: {
             postId: postId,
             postDetail: postDetailResult?.data,
-            recentPosts: recentPostsResult?.data,
             curTags: curPostTagsResult?.data
         },
         revalidate: 300
