@@ -62,13 +62,16 @@ export default function Home({timelineData}) {
                                 <svg t="1671055556738"
                                      className="icon inline-block"
                                      viewBox="0 0 1024 1024" version="1.1"
-                                     xmlns="http://www.w3.org/2000/svg" p-id="1491" width="15" height="15"><path
-                                    d="M665.6 224H205.3c-61.8 0-112 50.2-112 112v512c0 61.8 50.2 112 112 112h460.3c61.8 0 112-50.2 112-112V336c0-61.8-50.2-112-112-112z m48 624c0 26.5-21.5 48-48 48H205.3c-26.5 0-48-21.5-48-48V336c0-26.5 21.5-48 48-48h460.3c26.5 0 48 21.5 48 48v512z"
-                                    fill="#CCCCCC" p-id="1492"></path><path
-                                    d="M820.7 64H301.3c-61.8 0-112 50.2-112 112h64c0-26.5 21.5-48 48-48h519.4c26.5 0 48 21.5 48 48v576c0 26.5-21.5 48-48 48v64c61.8 0 112-50.2 112-112V176c0-61.8-50.2-112-112-112z"
-                                    fill="#CCCCCC" p-id="1493"></path><path
-                                    d="M243.5 400h384v64h-384zM243.5 560h384v64h-384zM243.5 720h246.8v64H243.5z"
-                                    fill="#CCCCCC" p-id="1494"></path>
+                                     xmlns="http://www.w3.org/2000/svg" p-id="1491" width="15" height="15">
+                                    <path
+                                        d="M665.6 224H205.3c-61.8 0-112 50.2-112 112v512c0 61.8 50.2 112 112 112h460.3c61.8 0 112-50.2 112-112V336c0-61.8-50.2-112-112-112z m48 624c0 26.5-21.5 48-48 48H205.3c-26.5 0-48-21.5-48-48V336c0-26.5 21.5-48 48-48h460.3c26.5 0 48 21.5 48 48v512z"
+                                        fill="#CCCCCC" p-id="1492"></path>
+                                    <path
+                                        d="M820.7 64H301.3c-61.8 0-112 50.2-112 112h64c0-26.5 21.5-48 48-48h519.4c26.5 0 48 21.5 48 48v576c0 26.5-21.5 48-48 48v64c61.8 0 112-50.2 112-112V176c0-61.8-50.2-112-112-112z"
+                                        fill="#CCCCCC" p-id="1493"></path>
+                                    <path
+                                        d="M243.5 400h384v64h-384zM243.5 560h384v64h-384zM243.5 720h246.8v64H243.5z"
+                                        fill="#CCCCCC" p-id="1494"></path>
                                 </svg>
 
                             </div>
@@ -143,8 +146,19 @@ export default function Home({timelineData}) {
             </div>
 
             <div className={"h1-color text-sm text-center my-10"}>
-                <a href="https://beian.miit.gov.cn/" target="_blank">皖ICP备2023000569号-1</a>
+                <a href="https://beian.miit.gov.cn/" target="_blank">皖ICP备2023000569号</a>
+                <a
+                    className={"flex items-center justify-center"}
+                    target="_blank"
+                    href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=34072202000271"
+                >
+                    <img className={"m-0 p-0"} src="/image/gonan.png" alt={"公安"}/>
+                    <span>
+                        皖公网安备 34072202000271号
+                    </span>
+                </a>
             </div>
+
 
 
             <ToastContainer
