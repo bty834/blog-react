@@ -7,6 +7,7 @@ import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import remarkMath from "remark-math";
 import rehypeKatex from "rehype-katex";
+// warning: next version should be 13.0.0, katex will get hydration failed error when it was 13.0.4
 import 'katex/dist/katex.min.css' // `rehype-katex` does not import the CSS for you
 export const code = ({node, inline, className, children, ...props}) => {
     const match = /language-(\w+)/.exec(className || '')
