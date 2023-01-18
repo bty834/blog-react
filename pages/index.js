@@ -25,7 +25,7 @@ export default function Home({timelineData}) {
     return (
         <div className="container mx-auto px-7 pb-4">
             <Head>
-                <title>Bao的博客</title>
+                <title>个人网站</title>
                 <link rel="icon" href="/favicon.ico"/>
             </Head>
 
@@ -103,12 +103,12 @@ export default function Home({timelineData}) {
                     {
                         skills?.length > 0 && (
                             skills.map((skill, index) => (
-                                <span key={index} onClick={() => {
-                                    window.open(skill.link)
-                                }} className="hover:text-pink-500  cursor-pointer flex items-center justify-center my-2">
+                                <a key={index} target={"_blank"} href={skill.link}
+                                   className="hover:text-pink-500  cursor-pointer flex items-center justify-center my-2"
+                                >
                                     {skill.svg}
                                     {skill.name}
-                                </span>
+                                </a>
                             ))
                         )
                     }

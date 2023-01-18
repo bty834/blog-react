@@ -104,7 +104,7 @@ const PostEditor = () => {
             }
             updatePost(newPost).then(r => {
                 if (r.code === 200) {
-                    successTip("newPost插入成功！")
+                    successTip("更新成功！")
                     clearPost()
                 } else {
                     uploadError(r.msg)
@@ -119,7 +119,7 @@ const PostEditor = () => {
             }
             insertPost(newPost).then(r => {
                     if (r.code === 200) {
-                        successTip("newPost创建成功！")
+                        successTip("创建成功！")
                         clearPost()
                     } else {
                         uploadError(r.msg)

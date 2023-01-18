@@ -13,6 +13,7 @@ import {CalendarLogo} from "../../../components/logo/Logo";
 import moment from "moment/moment";
 import Markdown from "../../../components/Markdown";
 import Catalog from "../../../components/Catalog";
+import Head from "next/head";
 
 
 // const commentsPerPage = 5
@@ -28,6 +29,10 @@ const PostId = ({postId, postDetail, curTags}) => {
 
     return (
         <div className="container mx-auto px-7 pb-4">
+            <Head>
+                <title>博文详情</title>
+                <link rel="icon" href="/favicon.ico"/>
+            </Head>
             <div className="grid grid-cols-1 xl:grid-cols-11 gap-5">
                 <div className="col-span-1 xl:col-span-8">
                     {/*<Markdown content={postDetail?.content}/>*/}
