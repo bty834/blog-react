@@ -52,14 +52,17 @@ export default function Home({timelineData}) {
                                 开发者
 
                             </div>
-                            <div
+                            <div className={"flex  items-center justify-center space-x-2"}>
+
+
+                                <span
 
                                 className={"text-sm tracking-tight cursor-pointer lg:text-lg"}
                                 onClick={clickToCopy}
                                 title={"点击复制"}
-                            >
-                                {process.env.NEXT_PUBLIC_EMAIL}
-                                <svg t="1671055556738"
+                                >
+                                    {process.env.NEXT_PUBLIC_EMAIL}
+                                    <svg t="1671055556738"
                                      className="icon inline-block"
                                      viewBox="0 0 1024 1024" version="1.1"
                                      xmlns="http://www.w3.org/2000/svg" p-id="1491" width="15" height="15">
@@ -72,10 +75,19 @@ export default function Home({timelineData}) {
                                     <path
                                         d="M243.5 400h384v64h-384zM243.5 560h384v64h-384zM243.5 720h246.8v64H243.5z"
                                         fill="#CCCCCC" p-id="1494"></path>
-                                </svg>
+                                    </svg>
+                                </span>
+                                <a href={process.env.NEXT_PUBLIC_GITHUB}
+                                   className={"text-sm tracking-tight cursor-pointer lg:text-lg"}
+                                   title={"点击跳转到github"}
+                                >
+                                    <svg t="1677046739628" className="icon" viewBox="0 0 1024 1024" version="1.1"
+                                         xmlns="http://www.w3.org/2000/svg" p-id="3133" width="22" height="22"><path
+                                        d="M0 524.992q0 166.016 95.488 298.496t247.488 185.504q6.016 0.992 10.016 0.992t6.496-1.504 4-3.008 2.016-4.992 0.512-4.992v-100.512q-36.992 4-66.016-0.512t-45.504-14.016-28.992-23.488-16.992-25.504-8.992-24-5.504-14.496q-8.992-15.008-27.008-27.488t-27.008-20-2.016-14.496q50.016-26.016 112.992 66.016 34.016 51.008 119.008 30.016 10.016-40.992 40-70.016Q293.984 736 237.984 670.976t-56-158.016q0-87.008 55.008-151.008-22.016-64.992 6.016-136.992 28.992-2.016 64.992 11.488t50.496 23.008 25.504 17.504q56.992-16 128.512-16t129.504 16q12.992-8.992 28.992-19.008t48.992-21.504 60.992-9.504q27.008 71.008 7.008 135.008 56 64 56 151.008 0 92.992-56.992 158.496t-172 85.504q43.008 43.008 43.008 104v128.992q0 0.992 0.992 3.008 0 6.016 0.512 8.992t4.512 6.016 12 3.008q152.992-52 250.496-185.504t97.504-300.512q0-104-40.512-199.008t-108.992-163.488-163.488-108.992T512.032 12.96 313.024 53.472 149.536 162.464t-108.992 163.488-40.512 199.008z"
+                                        p-id="3134"></path></svg>
 
+                                </a>
                             </div>
-
                             <button
                                 className={"mt-4 md:absolute md:right-2 p-2 text-sm md:text-md xl:text-lg rounded-lg search-btn"}
                                 onClick={() => {
@@ -158,7 +170,6 @@ export default function Home({timelineData}) {
                     </span>
                 </a>
             </div>
-
 
 
             <ToastContainer
