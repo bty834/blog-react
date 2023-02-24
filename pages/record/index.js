@@ -140,7 +140,7 @@ const Record = () => {
                 >
                     {records?.length > 0 && records.map((record) => (
                         <Link key={record.id} href={record.url} target={'_blank'}>
-                            <div className="hover:scale-105 mb-8 relative transition-transform duration-500">
+                            <div className="hover:scale-105 mb-8 relative  text-center   transition-transform duration-500">
                                 {login && (
                                     <span
                                         onClick={(e) => {
@@ -160,7 +160,7 @@ const Record = () => {
                                     </svg>
                                 </span>
                                 )}
-                                <img className="mb-2 rounded-md "
+                                <img className="mb-2 mx-auto rounded-md "
                                      src={record.coverUrl.trim() === "" ? record.url : record.coverUrl}
                                      alt={record.title}/>
                                 <span className="sub-panel-bg h1-color p-1 rounded-lg">
