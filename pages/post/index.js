@@ -105,7 +105,7 @@ export default function Post() {
     return (
         <div className="container mx-auto px-7 pb-4">
             <Head>
-                <title>博文列表</title>
+                <title>博文</title>
                 <link rel="icon" href="/favicon.ico"/>
             </Head>
 

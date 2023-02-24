@@ -13,7 +13,7 @@ const About = () => {
     return (
         <div className="container mx-auto px-7 pb-4">
             <Head>
-                <title>Bao的博客</title>
+                <title>关于</title>
                 <link rel="icon" href="/favicon.ico"/>
             </Head>
 

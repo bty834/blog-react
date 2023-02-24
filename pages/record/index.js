@@ -94,7 +94,7 @@ const Record = () => {
     return (
         <div className="container mx-auto px-7 pb-4">
             <Head>
-                <title>记录列表</title>
+                <title>记录</title>
                 <link rel="icon" href="/favicon.ico"/>
             </Head>
 

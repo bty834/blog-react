@@ -16,7 +16,7 @@ const Search = () => {
     return (
         <div className="container mx-auto flex-col justify-center items-center px-7 mb-8">
             <Head>
-                <title>Bao的博客</title>
+                <title>404</title>
                 <link rel="icon" href="/favicon.ico"/>
             </Head>
 

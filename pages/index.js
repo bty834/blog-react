@@ -25,7 +25,7 @@ export default function Home({timelineData}) {
     return (
         <div className="container mx-auto px-7 pb-4">
             <Head>
-                <title>个人网站</title>
+                <title>首页</title>
                 <link rel="icon" href="/favicon.ico"/>
             </Head>
 
